@@ -13,7 +13,7 @@ endif
 
 function! shoot#Shoot(line1, line2)
     silent call tohtml#Convert2HTML(a:line1, a:line2)
-    let l:bufnr = bufnr()
+    let l:bufnr = bufnr('%')
     let s:bufAsStr = join(getbufline(l:bufnr, 1, '$'), "\n")
     execute l:bufnr.'bd!'
 python3 << ENDPYTHON
